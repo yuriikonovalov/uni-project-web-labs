@@ -1,0 +1,62 @@
+.body {
+  margin: 0;
+  font-family: "Comfortaa", monospace;
+  background-color: white;
+}
+
+.brand-title {
+  font-family: "Righteous", monospace;
+}
+
+#welcome-block {
+  font-family: "Comfortaa", monospace;
+  font-weight: 700;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
+}
+
+#navbar {
+  background-color: #f5f4ed;
+  padding-left: clamp(1rem, -0.875rem + 8.333vw, 5rem);
+  padding-right: clamp(1rem, -0.875rem + 8.333vw, 5rem);
+}
+
+#top-section {
+  background-color: #f5f4ed;
+  padding-left: clamp(1rem, -0.875rem + 8.333vw, 5rem);
+  padding-right: clamp(1rem, -0.875rem + 8.333vw, 5rem);
+  padding-top: 50px;
+}
+
+#middle-section {
+  margin-top: 50px;
+}
+
+.social-button {
+  margin: 20px;
+}
+
+.icon-container-linkedin {
+  background-color: #0082ca;
+  color: white;
+}
+
+.icon-container-github {
+  background-color: #333333;
+  color: white;
+}
+
+.icon-container-mail {
+  background-color: #f8cc0a;
+  color: white;
+}
+
+.icon-container {
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.button-text {
+  font-size: 20px;
+}
