@@ -60,3 +60,8 @@
 .button-text {
   font-size: 20px;
 }
+
+.temperature{
+  margin-right: 1.5rem;
+  display: inline;
+}
