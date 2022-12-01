@@ -1,17 +1,17 @@
 <?php
 class TableRow
 {
-  public string $region;
-  public float $population;
-  public int $uni_number;
-  public float $uni_per_hundren;
+  public  $region;
+  public  $population;
+  public  $uni_number;
+  public  $uni_per_hundren;
 
-  public function __construct(string $region, float $population, int $uni_number)
+  public function __construct($region,  $population,  $uni_number)
   {
     $this->region = $region;
     $this->population = $population;
     $this->uni_number = $uni_number;
-    $this->uni_per_hundren = round($uni_number / $population * 100, 2);
+    $this->uni_per_hundren = round(floatval($uni_number) / floatval($population) * 100, 2);
   }
 }
 function get_table_row(&$file)

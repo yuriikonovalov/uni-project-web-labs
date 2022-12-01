@@ -40,7 +40,7 @@
           </a>
         </il>
         <il class="nav-item">
-          <a href="../lab8/lab8.php" class="nav-link">
+          <a href="../lab8/lab8.html" class="nav-link">
             Лабораторна робота <i class="bi bi-8-circle"></i>
           </a>
         </il>
