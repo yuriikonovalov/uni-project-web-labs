@@ -14,10 +14,11 @@ function request_weather($url = 'https://www.gismeteo.ua/ua/weather-kharkiv-5053
 
 class Temperature
 {
-    public string $hour;
-    public string $degree;
+    public  $hour;
+    public  $degree;
 
-    public function __construct(string $hour, string $degree) {
+    public function __construct($hour,  $degree)
+    {
         $this->hour = $hour;
         $this->degree = $degree;
     }
@@ -25,14 +26,14 @@ class Temperature
 
 class Weather
 {
-    public string $city;
-    public string $date;
-    public string $sunrise;
-    public string $sunset;
-    public string $day_time;
-    public array $temperatures;
+    public  $city;
+    public  $date;
+    public  $sunrise;
+    public  $sunset;
+    public  $day_time;
+    public  $temperatures;
 
-    public function __construct(string $response)
+    public function __construct($response)
     {
         $this->city = $this->get_city($response);
         $this->date = $this->get_date($response);
@@ -98,7 +99,7 @@ class Weather
     }
 
 
-    private function format_day_time(string $day_time)
+    private function format_day_time($day_time)
     {
         $array = explode(" ", $day_time);
         $formatted_hours = $this->format_hours($array[0]);
@@ -110,13 +111,16 @@ class Weather
         }
     }
 
-    private function format_hours(string $hours)
+    private function format_hours($hours)
     {
-        return match ($hours) {
-            '1', '21' => "$hours година",
-            '2', '3', '4', '22', '23', '24' => "$hours години",
-            default =>  "$hours годин"
-        };
+        switch (true) {
+            case in_array($hours, array('1', '21')):
+                return "$hours година";
+            case in_array($hours, array('2', '3', '4', '22', '23', '24')):
+                return "$hours години";
+            default:
+                return "$hours годин";
+        }
     }
 
     private function get_temperatures($response)
